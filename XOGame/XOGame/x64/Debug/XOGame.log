@@ -1,0 +1,6 @@
+﻿  XOGame.cpp
+C:\Users\Mohammad\source\repos\UniProjects\XOGame\XOGame\XOGame.cpp(237,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Mohammad\source\repos\UniProjects\XOGame\XOGame\XOGame.cpp(255,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Mohammad\source\repos\UniProjects\XOGame\XOGame\XOGame.cpp(269): warning C4715: 'XOGame::XOSet': not all control paths return a value
+C:\Users\Mohammad\source\repos\UniProjects\XOGame\XOGame\XOGame.cpp(288): warning C4715: 'XOGame::XOChanger': not all control paths return a value
+  XOGame.vcxproj -> C:\Users\Mohammad\source\repos\UniProjects\XOGame\x64\Debug\XOGame.exe
