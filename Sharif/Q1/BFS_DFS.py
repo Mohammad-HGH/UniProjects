@@ -1,3 +1,7 @@
+'''
+    the flowing commented code, release node graph with input relation.
+'''
+
 # from collections import defaultdict
 
 # def build_graph():
