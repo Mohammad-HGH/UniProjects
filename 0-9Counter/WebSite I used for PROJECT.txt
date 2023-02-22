@@ -1,0 +1,4 @@
+https://www.youtube.com/watch?v=k9rmuSiCEeg
+https://exploreembedded.com/wiki/Interfacing_Seven_Segment_with_8051
+https://www.electronics-tutorials.ws/blog/7-segment-display-tutorial.html
+https://www.keil.com/c51/pk51kit.asp
