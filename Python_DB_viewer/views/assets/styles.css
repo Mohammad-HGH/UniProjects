@@ -1,0 +1,125 @@
+
+.container {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.title {
+    margin: 2rem;
+    text-align: center;
+    padding: 5px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px 10px lightgrey;
+
+}
+
+.title {
+    animation: anim-shadower 25s infinite linear;
+}
+.separator {
+    margin: 100px;
+    border: 2px dashed lightgrey;
+}
+
+@keyframes anim-shadower {
+    0% {
+        box-shadow: 10px 10px 10px 10px lightgrey;
+
+    }
+    10% {
+        box-shadow: 10px 10px 10px 10px grey;
+
+    }
+    20% {
+        box-shadow: 10px 10px 10px 10px lightblue;
+    }
+    30% {
+        box-shadow: 10px 10px 10px 10px royalblue;
+    }
+    40% {
+        box-shadow: 10px 10px 10px 10px lightgreen;
+    }
+    50% {
+        box-shadow: 10px 10px 10px 10px yellowgreen;
+    }
+    60% {
+        box-shadow: 10px 10px 10px 10px yellow;
+    }
+    70% {
+        box-shadow: 10px 10px 10px 10px lightcoral;
+    }
+    80% {
+        box-shadow: 10px 10px 10px 10px coral;
+    }
+    90% {
+        box-shadow: 10px 10px 10px 10px darkorange;
+    }
+}
+
+.table-words {
+    border-collapse: collapse;
+    text-align: left;
+    width: 75%;
+    margin-top: 2rem;
+
+    margin-bottom: 1rem;
+    margin: auto;
+    max-width: 100%;
+    text-align: center;
+    background-color: transparent;
+}
+
+.table-words th,
+.table-words td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.table-words th {
+    background-color: gray;
+}
+
+.limit-drop-down {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.word-button {
+    width: 200px;
+    font-size: 15px;
+    padding: 5px;
+    font-weight: bolder;
+    border-radius: 15px;
+    word-wrap: break-word;
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+.word-button:hover {
+    background-color: coral;
+    box-shadow: 10px 0 50px black;
+}
+
+.download-button {
+    cursor: pointer;
+    border-radius: 1rem;
+    background: transparent;
+    transition: all 2s;
+    padding: 5px 10px 5px 10px;
+}
+
+.download-button:hover {
+    box-shadow: 0 0 40px lightcoral;
+    background: coral;
+}
+
+.score-average {
+    color: darkgreen;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
