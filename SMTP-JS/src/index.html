@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Send Mail</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <button class="learn-more" onclick="sendEmail()">
+            <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">Send Email</span>
+        </button>
+    </div>
+
+
+    <script src="./smtp.js"></script>
+    <script type="text/javascript">
+        function sendEmail () {
+            Email.send( {
+                Host: "smtp.elasticemail.com",
+                Username: "mohammadsmtp@gmail.com",
+                Password: "08952A46F67416FCD51CCADCE69EA7B1F47B",
+                To: 'nazarimohammad@petalmail.com, rahmanimanesh@yahoo.com',
+                From: "mohammadsmtp@gmail.com",
+                Subject: "Start SMTP",
+                Body: "Text sent from SMTP, Mohammad nazari sent this message by JS SMTP"
+            } ).then(
+                message => alert( message )
+            );
+        }
+    </script>
+</body>
+
+</html>
