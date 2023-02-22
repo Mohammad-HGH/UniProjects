@@ -1,0 +1,158 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>d32c46bf-7a74-4dfd-9e19-4c36c145ada7</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>VoiceDetection.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>VoiceDetection</Name>
+    <RootNamespace>VoiceDetection</RootNamespace>
+    <InterpreterId>CondaEnv|CondaEnv|voicedetect_env</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="featureextraction.py" />
+    <Compile Include="modeltraining.py" />
+    <Compile Include="test.py" />
+    <Compile Include="VoiceDetection.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|env1" />
+    <InterpreterReference Include="CondaEnv|CondaEnv|voicedetect_env" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="development_set\anthonyschaller-20071221-\etc\audiofile_details" />
+    <Content Include="development_set\anthonyschaller-20071221-\etc\GPL_License" />
+    <Content Include="development_set\anthonyschaller-20071221-\etc\HDMan_log" />
+    <Content Include="development_set\anthonyschaller-20071221-\etc\HVite_log" />
+    <Content Include="development_set\anthonyschaller-20071221-\etc\PROMPTS" />
+    <Content Include="development_set\anthonyschaller-20071221-\etc\prompts-original" />
+    <Content Include="development_set\anthonyschaller-20071221-\etc\README" />
+    <Content Include="development_set\anthonyschaller-20071221-\LICENSE" />
+    <Content Include="development_set\anthonyschaller-20071221-\wav\a0491.wav" />
+    <Content Include="development_set\anthonyschaller-20071221-\wav\a0492.wav" />
+    <Content Include="development_set\arjuan-20100820-acz\etc\audiofile_details" />
+    <Content Include="development_set\arjuan-20100820-acz\etc\GPL_license.txt" />
+    <Content Include="development_set\arjuan-20100820-acz\etc\HDMan_log" />
+    <Content Include="development_set\arjuan-20100820-acz\etc\HVite_log" />
+    <Content Include="development_set\arjuan-20100820-acz\etc\PROMPTS" />
+    <Content Include="development_set\arjuan-20100820-acz\etc\prompts-original" />
+    <Content Include="development_set\arjuan-20100820-acz\etc\README" />
+    <Content Include="development_set\arjuan-20100820-acz\LICENSE" />
+    <Content Include="development_set\arjuan-20100820-acz\wav\b0217.wav" />
+    <Content Include="development_set\arjuan-20100820-acz\wav\b0218.wav" />
+    <Content Include="development_set\arjuan-20100820-acz\wav\b0226.wav" />
+    <Content Include="development_set_enroll.txt" />
+    <Content Include="development_set_test.txt" />
+    <Content Include="documentation\Minor Report-Atul.docx" />
+    <Content Include="documentation\Screenshots\1-voxForge-Model_training.png" />
+    <Content Include="documentation\Screenshots\2-VoxForge-Identification.png" />
+    <Content Include="documentation\Screenshots\3-SelfData-Model-Training.png" />
+    <Content Include="documentation\Screenshots\4-SelfData-Identification.png" />
+    <Content Include="documentation\Screenshots\5-SingleAudio-test.png" />
+    <Content Include="documentation\Screenshots\6-CompleteSample-Test.png" />
+    <Content Include="documentation\Screenshots\7-Accuracy.png" />
+    <Content Include="documentation\Speaker-Identification-PPt.pptx" />
+    <Content Include="LICENSE" />
+    <Content Include="SampleData\Aditya_16.wav" />
+    <Content Include="SampleData\Asthadi_17.wav" />
+    <Content Include="SampleData\Atul_20.wav" />
+    <Content Include="SampleData\Karan_17.wav" />
+    <Content Include="Speakers_models\Aditya.gmm" />
+    <Content Include="Speakers_models\Ankit.gmm" />
+    <Content Include="Speakers_models\Arti.gmm" />
+    <Content Include="Speakers_models\Asthadi.gmm" />
+    <Content Include="Speakers_models\Atul.gmm" />
+    <Content Include="Speakers_models\Bharti.gmm" />
+    <Content Include="Speakers_models\Himanshu.gmm" />
+    <Content Include="Speakers_models\Kamlesh.gmm" />
+    <Content Include="Speakers_models\Karan.gmm" />
+    <Content Include="Speakers_models\Katiyar.gmm" />
+    <Content Include="Speakers_models\Khus.gmm" />
+    <Content Include="Speakers_models\Mayank.gmm" />
+    <Content Include="Speakers_models\Partha.gmm" />
+    <Content Include="Speakers_models\Pooja.gmm" />
+    <Content Include="Speakers_models\Rajeev.gmm" />
+    <Content Include="Speakers_models\Raunak.gmm" />
+    <Content Include="Speakers_models\Shradha.gmm" />
+    <Content Include="speaker_models\anthonyschaller.gmm" />
+    <Content Include="speaker_models\Apple_Eater.gmm" />
+    <Content Include="speaker_models\Ara.gmm" />
+    <Content Include="speaker_models\argail.gmm" />
+    <Content Include="speaker_models\ariyan.gmm" />
+    <Content Include="speaker_models\arjuan.gmm" />
+    <Content Include="speaker_models\Artem.gmm" />
+    <Content Include="speaker_models\arthur.gmm" />
+    <Content Include="speaker_models\artk.gmm" />
+    <Content Include="speaker_models\arun.gmm" />
+    <Content Include="speaker_models\arvala.gmm" />
+    <Content Include="speaker_models\asalkeld.gmm" />
+    <Content Include="speaker_models\asladic.gmm" />
+    <Content Include="speaker_models\AslakKnutsen.gmm" />
+    <Content Include="speaker_models\asp.gmm" />
+    <Content Include="speaker_models\AT.gmm" />
+    <Content Include="speaker_models\atamur.gmm" />
+    <Content Include="speaker_models\ataru80.gmm" />
+    <Content Include="speaker_models\atterer.gmm" />
+    <Content Include="speaker_models\audioodyssey.gmm" />
+    <Content Include="speaker_models\avsa242.gmm" />
+    <Content Include="speaker_models\ax.gmm" />
+    <Content Include="speaker_models\axllaruse.gmm" />
+    <Content Include="speaker_models\azmisov.gmm" />
+    <Content Include="speaker_models\B.gmm" />
+    <Content Include="speaker_models\bachroxx.gmm" />
+    <Content Include="speaker_models\bae.gmm" />
+    <Content Include="speaker_models\Bahoke.gmm" />
+    <Content Include="speaker_models\Bareford.gmm" />
+    <Content Include="speaker_models\bart.gmm" />
+    <Content Include="speaker_models\Bassel.gmm" />
+    <Content Include="speaker_models\beady.gmm" />
+    <Content Include="speaker_models\beez1717.gmm" />
+    <Content Include="speaker_models\belmontguy.gmm" />
+    <Content Include="testSamplePath.txt" />
+    <Content Include="trainingDataPath.txt" />
+    <Content Include="trainingData\Aditya-001\Aditya_1.wav" />
+    <Content Include="trainingData\Atul-005\Atul_1.wav" />
+    <Content Include="trainingData\Bharti-006\Bharti_15.wav" />
+    <Content Include="trainingData\Partha-013\Partha_1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="development_set\" />
+    <Folder Include="development_set\anthonyschaller-20071221-\" />
+    <Folder Include="development_set\anthonyschaller-20071221-\etc\" />
+    <Folder Include="development_set\anthonyschaller-20071221-\wav\" />
+    <Folder Include="development_set\arjuan-20100820-acz\" />
+    <Folder Include="development_set\arjuan-20100820-acz\etc\" />
+    <Folder Include="development_set\arjuan-20100820-acz\wav\" />
+    <Folder Include="documentation\" />
+    <Folder Include="documentation\Screenshots\" />
+    <Folder Include="SampleData\" />
+    <Folder Include="Speakers_models\" />
+    <Folder Include="speaker_models\" />
+    <Folder Include="trainingData\" />
+    <Folder Include="trainingData\Aditya-001\" />
+    <Folder Include="trainingData\Atul-005\" />
+    <Folder Include="trainingData\Bharti-006\" />
+    <Folder Include="trainingData\Partha-013\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
