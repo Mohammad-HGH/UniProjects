@@ -1,0 +1,20 @@
+{
+  "deepscan.enable": true,
+  "sqltools.connections": [
+    {
+      "mssqlOptions": {
+        "appName": "SQLTools",
+        "useUTC": true,
+        "encrypt": true
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 1433,
+      "driver": "MSSQL",
+      "name": "SQL",
+      "database": "TestDB",
+      "username": "sa",
+      "password": "Heli@ghar771379"
+    }
+  ]
+}
