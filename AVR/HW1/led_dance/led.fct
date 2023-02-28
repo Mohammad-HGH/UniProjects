@@ -1,0 +1,5 @@
+main DSTACK_USAGE:0 DSTACK_LEVEL:0 FILE:"led.c" LINE:4
+pow DSTACK_USAGE:12 DSTACK_LEVEL:12 FILE:"C:\cvavr\lib\math.lib" LINE:740
+exp DSTACK_USAGE:14 DSTACK_LEVEL:26 FILE:"C:\cvavr\lib\math.lib" LINE:724
+floor DSTACK_USAGE:4 DSTACK_LEVEL:30 FILE:"C:\cvavr\lib\math.lib" LINE:659
+ftrunc DSTACK_USAGE:4 DSTACK_LEVEL:34 FILE:"C:\cvavr\lib\math.lib" LINE:544
