@@ -1,0 +1,71 @@
+Solomon Systech SSD1963 Color TFT LCD and
+ADS7846 Resistive Touchscreen controller demo
+(C) Copyright 2011-2014 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+This program can't be compiled with the Evaluation or
+Standard versions of CodeVisionAVR, because the glcd_ssd1963.lib
+file is supplied only with the Advanced license.
+In this case you can program the ATxmega128A1 FLASH with
+the contents of the
+\EXAMPLES\Graphic LCD\Resistive Touchscreen\SSD1963 800x480\Release\Exe\demo_rtouch_800_480.hex
+file.
+
+The demo is designed to run on the STK600
+development board with an ATxmega128A1
+chip using the internal 32 MHz oscillator
+as clock source.
+
+A 800x480 7" TFT LCD module is used for
+the purpose of this demo.
+It can be replaced with other similar modules with
+the SSD1963 controller.
+
+The TFT LCD module connections are:
+DB0  - PORTC bit 0
+DB1  - PORTC bit 1
+DB2  - PORTC bit 2
+DB3  - PORTC bit 3
+DB4  - PORTC bit 4
+DB5  - PORTC bit 5
+DB6  - PORTC bit 6
+DB7  - PORTC bit 7
+
+DB8  - PORTA bit 0
+DB9  - PORTA bit 1
+DB10 - PORTA bit 2
+DB11 - PORTA bit 3
+DB12 - PORTA bit 4
+DB13 - PORTA bit 5
+DB14 - PORTA bit 6
+DB15 - PORTA bit 7
+
+/CS  - PORTB bit 3
+D/C  - PORTB bit 0
+/RD  - PORTB bit 2
+/WR  - PORTB bit 1
+/RST - PORTD bit 2
+
+Backlight PWM - PORTD bit 1
+
+GND   - GND
++3.3V - +3.3V
++5V   - +5V
+
+ADS7846 touch screen controller connections:
+/CS     - PORTE bit 1
+DCLK    - PORTE bit 0
+DIN     - PORTE bit 2
+DOUT    - PORTE bit 3
+/PENIRQ - PORTD bit 0
+
+FLASH chip is not used in this demo
+FCS (/CS) - +3.3V
+
+If you are using a different LCD module,
+please use the connections from the module datasheet.
+
+The connections can be modified by accessing the
+Project|Configure|C Compiler|Libraries|Graphic Display and
+Project|Configure|C Compiler|Libraries|Resistive Touchscreen
+menus.

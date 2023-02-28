@@ -1,0 +1,72 @@
+Solomon Systech SSD1963 Color TFT LCD controller demo
+(C) Copyright 2011-2012 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+This program can't be compiled with the Evaluation or
+Standard versions of CodeVisionAVR, because the glcd_ssd1963.lib
+file is supplied only with the Advanced license.
+In this case you can program the ATxmega128A1 FLASH with
+the contents of the
+\EXAMPLES\Graphic LCD\SSD1963\Exe\demo_tft43.hex
+file.
+
+The demo is designed to run on the Atmel Xplain
+development board with an ATxmega128A1
+chip using the internal 32 MHz oscillator
+as clock source.
+
+A large portion of the program (51712 bytes)
+consists of the uncompressed 186x139 64k color
+image from the file image.c
+Due to the limited number of I/O pins of the Xplain
+board, there was no possibility to connect a SD CARD
+and store this image on it, so for the purpose of this demo,
+it was located in chip's FLASH memory.
+The image was left uncompressed in order to allow fast loading.
+
+In this demo the SSD1963 controller operates in 
+8 bit interface mode.
+For better performance the 16 bit operating mode can
+be selected by accessing the
+Project|Configure|C Compiler|Libraries|Graphic LCD menu.
+In this situation the DB8-DB15 signals must be also
+connected to one of the ATxmega128A1 ports.   
+
+A 480x272 4.3" TFT LCD module is used for
+the purpose of this demo.
+It can be replaced with other similar modules with
+the SSD1963 controller. 
+
+The TFT LCD module connections are:
+DB0  - PORTA bit 0
+DB1  - PORTA bit 1
+DB2  - PORTA bit 2
+DB3  - PORTA bit 3
+DB4  - PORTA bit 4
+DB5  - PORTA bit 5
+DB6  - PORTA bit 6
+DB7  - PORTA bit 7
+
+DB8  - not connected
+DB9  - not connected
+DB10 - not connected
+DB11 - not connected
+DB12 - not connected
+DB13 - not connected
+DB14 - not connected
+DB15 - not connected
+
+/CS  - PORTD bit 0
+D/C  - PORTD bit 1
+/RD  - PORTD bit 2
+/WR  - PORTD bit 3
+/RST - PORTD bit 4
+
+Backlight PWM - PORTD bit 5
+
+GND   - GND
++3.3V - +3.3V
++5V   - +5V
+
+The connections can be modified by accessing the
+Project|Configure|C Compiler|Libraries|Graphic LCD menu.

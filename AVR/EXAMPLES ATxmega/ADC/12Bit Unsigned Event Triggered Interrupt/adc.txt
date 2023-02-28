@@ -1,0 +1,44 @@
+Sample program to test the ATxmega128A1 ADC in 12 Bit unsigned
+event triggered interrupt mode.
+
+Timer/Counter TCC0 will overflow every 1000ms and will
+create an event on event channels 0..3, which will
+trigger AD conversions on ADCA channels 0..3.
+
+After the AD conversion will be complete for a channel,
+it's interrupt service routine will display the result.
+This approach can be used since the time interval between
+two conversions for a channel is quite large (1000ms)
+and the printf function has enough time to complete.
+If the time interval between two conversions for a channel
+is small, the printf must be removed from the interrupt
+service routine and conversion data just stored in a
+global array, in order to be displayed at a later stage.
+ 
+The chip is clocked from the internal 2MHz RC oscillator.
+
+Use a STK600 development board with STK600-TQFP100 and
+STK600-RC100X-13 addapters
+
+The STK600 programmer must be set in JTAG programming mode
+in the Tools|Programmer menu.
+
+Make sure that the VTARGET and VREF voltages are set to 3.6V
+using AVR Studio.
+The VTARGET LED on the STK600 board must be lighted.
+
+Make the following connections on the STK600
+PC3 - RS232 SPARE TXD.
+
+Connect the STK600 RS232 output to the COM port of the PC
+Make sure to configure the CodeVisionAVR Terminal
+to 9600bps 8N1.
+
+DC voltage in the 0-1.0V range must be applied between the
+PORTA pins ADC0, ADC1 and ADC3 (used by ADC channels 0, 1
+and 2) and GND.
+ADC channel 3 is used to read the voltage of the
+internal temperature reference.
+
+The PORTA ADC7 pin must be connected to GND, because it is
+used to read the ADC offset voltage, that must be compensated.

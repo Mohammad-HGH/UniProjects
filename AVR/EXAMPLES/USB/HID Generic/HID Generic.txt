@@ -1,0 +1,33 @@
+USB Generic HID Example
+© Copyright 2014 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+CodeVisionAVR Compiler version 3.11 or later
+is required.
+
+The program is designed to be executed on the
+Atmel AT90USBKEY development board, using
+an AT90USB1287 chip running at 8.000000 MHz.
+
+In order to use this example, the
+'Generic Hid Test.exe' program must be
+launched on the PC.
+This program requires the .NET framework 4.0
+to be installed on the computer.
+It can be downloaded from:
+http://www.microsoft.com/en-us/download/details.aspx?id=17718
+
+Note: The source code for the 'Generic Hid Test.exe' program
+is supplied only with the commercial versions of CodeVisionAVR.
+
+The AT90USBKEY, programmed with this example's
+code, must be connected to an USB port of the PC.
+
+The 'Generic Hid Test' program will display the
+report data sent by the AT90USBKEY to the PC host.
+
+Checking the LED boxes in the 'Generic Hid Test'
+program, will send report data to the USB device
+and will light the appropriate LEDs on the
+AT90USBKEY board.
+The LEDs are connected to PORTD bit 4..7 outputs.

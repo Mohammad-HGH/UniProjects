@@ -1,0 +1,60 @@
+Solomon Systech SSD1289 Color TFT LCD controller demo
+(C) Copyright 2011-2012 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+This program can't be compiled with the Evaluation or
+Standard versions of CodeVisionAVR, because the glcd_ssd1289.lib
+file is supplied only with the Advanced license.
+In this case you can program the ATxmega128A1 FLASH with
+the contents of the
+\EXAMPLES\Graphic LCD\SSD1289\Exe\demo_hy32d.hex
+file.
+
+The demo is designed to run on the STK600
+development board with an ATxmega128A1
+chip using the internal 32 MHz oscillator
+as clock source.
+
+A 240x320 HY32D 3.2" TFT LCD module is used for
+the purpose of this demo.
+It can be replaced with other similar modules with
+the SSD1289 controller. 
+
+The TFT LCD module connections are:
+DB0  - PORTE bit 0
+DB1  - PORTE bit 1
+DB2  - PORTE bit 2
+DB3  - PORTE bit 3
+DB4  - PORTE bit 4
+DB5  - PORTE bit 5
+DB6  - PORTE bit 6
+DB7  - PORTE bit 7
+
+DB8  - PORTC bit 0
+DB9  - PORTC bit 1
+DB10 - PORTC bit 2
+DB11 - PORTC bit 3
+DB12 - PORTC bit 4
+DB13 - PORTC bit 5
+DB14 - PORTC bit 6
+DB15 - PORTC bit 7
+
+/WR  - PORTD bit 3
+/RD  - PORTD bit 2
+D/C  - PORTD bit 1
+/RST - PORTD bit 4
+/CS  - PORTD bit 0
+
+Backlight connections:
+BLGND - GND
+BLVDD - +3.3V
+
+Power supply connections:
+GND - GND
++5V - +5V
+
+If you are using a different LCD module than HY32D,
+please use the connections from the module datasheet.
+
+The connections can be modified by accessing the
+Project|Configure|C Compiler|Libraries|Graphic LCD menu.

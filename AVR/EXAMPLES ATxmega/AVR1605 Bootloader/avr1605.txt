@@ -1,0 +1,5 @@
+Port of Atmel Application Note AVR1605 for the CodeVisionAVR C Compiler
+Copyright (C) 2009 HP InfoTech s.r.l., Pavel Haiduc
+
+Before using, please read the AVR1605 Application Note from:
+http://www.atmel.com/dyn/resources/prod_documents/doc8242.pdf

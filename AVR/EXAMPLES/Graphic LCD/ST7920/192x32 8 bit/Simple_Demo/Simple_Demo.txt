@@ -1,0 +1,42 @@
+Sitronix ST7920 Graphic LCD controller demo
+(C) Copyright 2011-2012 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+The ST7920 controller is interfaced to the
+AVR chip in 8 bit mode.
+
+The program is designed to be compiled with the Evaluation
+version, so it's capabilities are limited.
+
+The demo is designed to run on any ATmega328P
+development board with chip clock of 16 MHz.
+(Arduino Uno board)
+
+A Newhaven Display NHD-19232WG-BTMI-V#T
+192x32 pixels graphic LCD module was used.
+
+The LCD module to Arduino Uno connections are:
+ 7 DB0  - PORTD bit 0 (Digital 0)
+ 8 DB1  - PORTD bit 1 (Digital 1)
+ 9 DB2  - PORTD bit 2 (Digital 2)
+10 DB3  - PORTD bit 3 (Digital 3)
+11 DB4  - PORTD bit 4 (Digital 4)
+12 DB5  - PORTD bit 5 (Digital 5)
+13 DB6  - PORTD bit 6 (Digital 6)
+14 DB7  - PORTD bit 7 (Digital 7)
+
+ 6 E    - PORTB bit 0 (Digital 8)
+ 5 R/W  - PORTB bit 1 (Digital 9)
+ 4 RS   - PORTB bit 2 (Digital 10)
+
+ 1 VSS  - GND
+ 2 VDD  - +5V
+ 3 VO   - -------------| Contrast control voltage
+                       |
+                       V  10k
+                 |-----------|
+15 Vout - -------|           |--|GND
+                 |-----------|
+
+The connections can be modified by accessing the
+Project|Configure|C Compiler|Libraries|Graphic LCD menu.

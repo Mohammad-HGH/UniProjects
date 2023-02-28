@@ -1,0 +1,58 @@
+Creation, attribute and time stamp changing of a file on a MMC/SD/SD HC card
+example for the CodeVisionAVR V2.04.4+ compiler
+(C) 2009-2011 HP InfoTech s.r.l., Pavel Haiduc
+
+The example is intended to be run on the Mega128-Dev development board
+from www.priio.com.
+The development board uses an ATmega128 chip running at 14.745600 MHz
+
+The SD card socket on the development board is connected to the
+following I/O ports:
+
+SD socket    CD4050    ATmega128
+pin1  /CS -----<|----- PORTD bit6
+pin2  SI  -----<|----- MOSI
+pin3  GND
+pin4  +3.3V
+pin5  SCK -----<|----- SCK
+pin6  GND
+pin7  SO  ------------ MISO
+pin9  GND
+pin10 /CD ------------ PORTG bit4 with 10k pull-up resistor to +5V
+pin11 WP  ------------ PORTG bit3 with 10k pull-up resistor to +5V
+pin12 GND
+
+The CD4050 CMOS buffer is powered from a +3.3V supply and
+performs logic level translation from 5V (AVR) to 3.3V (SD card).
+
+For other I/O port connections, you need to make appropriate changes in the
+"Project|Configure|C Compiler|Libraries|MMC/SD/SD HC Card and FAT Support"
+menu.
+
+The development board also uses a PCF8563 RTC connected to the
+following I/O ports:
+
+PCF8563                ATmega128
+pin5 SDA ------------- PORTD bit1 with 10k pull-up resistor to +5V
+pin6 SCL ------------- PORTD bit0 with 10k pull-up resistor to +5V
+
+These connections are specified in the 
+"Project|Configure|C Compiler|Libraries|I2C" menu.
+
+The development board's serial socket P9 must be connected to the PC COM port.
+The CodeVisionAVR Terminal is used for displaying data received from the
+development board.
+The Terminal must be configured for:
+Baud Rate: 19200
+Data Bits: 8
+Parity: None
+Stop Bits: 1
+Emulation: TTY
+Handshaking: None
+Append LF on Reception: OFF
+Appearance|Rows: 40
+Appearance|Columns: 80
+
+If you are using the CodeVisionAVR Evaluation version, you may program into
+the FLASH the precompiled SDCARD4.HEX file found in the
+\Examples\SDCARD4\EXE directory

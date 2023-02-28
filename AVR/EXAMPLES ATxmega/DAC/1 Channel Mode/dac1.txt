@@ -1,0 +1,19 @@
+Sample program to test the ATxmega128A1 DACA in single
+channel mode, using the internal 1V reference.
+
+(C) Copyright 2010-2011 Pavel Haiduc, HP InfoTech srl
+
+Use a STK600 development board with STK600-TQFP100 and
+STK600-RC100X-13 addapters.
+
+The STK600 programmer must be set in JTAG programming mode
+in the Tools|Programmer menu.
+
+Make sure that the VTARGET and VREF voltages are set to 3.6V
+using AVR Studio.
+The VTARGET LED on the STK600 board must be lighted.
+
+The program can be also run on the Xplain development board.
+
+An 100Hz, 1V peak to peak, sinusoidal waveform will be
+present on the DACA channel 0 output DAC0 on PORTA pin 2.

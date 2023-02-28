@@ -1,0 +1,21 @@
+Bootloader based on Atmel application note AVR109 communication protocol
+Target chips: ATmega168/328
+
+The bootloader expects to receive the '@' character in the first
+5 seconds after reset and enters the bootloader mode and
+responds with a '\r' character.
+If the above condition is not met, execution starts from address 0.
+
+It can be tested with the included avr109test.exe program.
+
+Modify the definitions for SPM control from defines.h to suit your chip.
+
+Example, for ATmega328:
+#define	SPMCR_REG	SPMCSR
+#asm
+     #define WR_SPMCR_REG_R22 out 0x37,r22
+#endasm
+
+Chip clock frequency: 16MHz specified in the project configuration.
+
+

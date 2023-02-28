@@ -1,0 +1,21 @@
+Moving LED example
+
+CodeVisionAVR C Compiler
+(C) 2000-2013 HP InfoTech S.R.L.
+www.hpinfotech.ro
+
+Chip: ATmega328P running at 16MHz
+Memory Model: SMALL
+Data Stack Size: 512 bytes
+Development board: Arduino UNO
+
+- Connect the cathodes of 8 LEDs to the outputs marked DIGITAL 0..7 on the board.
+  These outputs correspond to PORTD pins PD0..PD7 of the microcontroller.
+- Connect each LED’s anode, using a 1k resistor, to the pin marked 5V of
+  the board’s POWER connector header.
+- Connect the USB connector of the Arduino UNO board to an USB port of your computer.
+  This will provide serial communication and power supply to the board.
+- Open the Project|Configure|After Build menu and select the correct COM
+  port used for communication with the Arduino UNO board.
+- Do Project|Build All and press the Program the Chip button in
+  the Information window that will be displayed after build.

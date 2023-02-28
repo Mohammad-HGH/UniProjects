@@ -1,0 +1,90 @@
+Solomon Systech SSD2119 Color TFT LCD controller demo.
+Display an image stored in a binary file on a SD card.
+
+(C) Copyright 2011-2013 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+The image was imported from a JPG PC file and
+converted to a binary format, compatible with the
+CodeVisionAVR graphic library, using the LCD Vision software.
+
+The converted "image.bin" file from the project directory
+must be copied to the SD card, so that it can be read
+by this example program. 
+
+This program can't be compiled with the Evaluation or
+Standard versions of CodeVisionAVR, because the glcd_ssd2119.lib
+file is supplied only with the Advanced license.
+In this case you can program the ATxmega128A1 FLASH with
+the contents of the
+\EXAMPLES ATXmega\Graphic LCD\Display Image from SD Card\SSD2119\Exe\Display image from SD card.hex
+file.
+
+The demo is designed to run on the STK600
+development board with an ATxmega128A1
+chip using the internal 32 MHz oscillator
+as clock source.
+
+A Micro SD card socket is connected to the development board
+as outlined below:
+
+Card Socket
+/CS ------------ PORTF bit 4
+SI  ------------ PORTF bit 5 MOSI
+SO  ------------ PORTF bit 6 MISO
+SCK ------------ PORTF bit 7 SCK
+GND ------------ GND
++3.3V ---------- +3.3V
+
+The /CD and WP signals are disabled in the project configuration,
+because a Micro SD card socket without these signals was used.
+
+For other I/O port connections, you need to make the appropriate changes in the
+"Project|Configure|C Compiler|Libraries|MMC/SD/SD HC Card and FAT Support"
+menu.
+
+A generic 320x240 3.5" TFT LCD module is used for
+the purpose of this demo.
+It can be replaced with other similar modules with
+the SSD2119 controller. 
+
+The TFT LCD module connections are:
+DB0  - not connected
+DB1  - not connected
+DB2  - not connected
+DB3  - not connected
+DB4  - not connected
+DB5  - not connected
+DB6  - not connected
+DB7  - not connected
+
+DB8  - PORTA bit 0
+DB9  - PORTA bit 1
+DB10 - PORTA bit 2
+DB11 - PORTA bit 3
+DB12 - PORTA bit 4
+DB13 - PORTA bit 5
+DB14 - PORTA bit 6
+DB15 - PORTA bit 7
+
+/CS           - PORTD bit 0
+RS (D/C)      - PORTD bit 1
+/WR           - PORTD bit 2
+/RD           - PORTD bit 3
+/RESET (/RST) - PORTD bit 4
+
+8 bit interface selection inputs:
+PS0  - +3.3V
+PS1  - +3.3V
+PS2  - GND
+PS3  - GND
+
+Power supply connections:
+GND  - GND
+3V3  - +3.3V
+
+If you are using a different LCD module,
+please use the connections from the module datasheet.
+
+The connections can be modified by accessing the
+Project|Configure|C Compiler|Libraries|Graphic LCD menu.

@@ -1,0 +1,14 @@
+Sample program to test the ATxmega128A1 USART C0 and EEPROM
+Use a STK600 development board with STK600-TQFP100 and
+STK600-RC100X-13 addaptors
+
+Make sure that the VTARGET and VREF voltages are set to 3.6V
+using AVR Studio.
+The VTARGET LED on the STK600 board must be lighted.
+
+Make the following connections on the STK600
+PC3 - RS232 SPARE TXD.
+
+Connect the STK600 RS232 output to the COM port of the PC
+Make sure to configure the CodeVisionAVR Terminal
+to 9600bps 8N1.

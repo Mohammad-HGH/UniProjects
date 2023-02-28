@@ -1,0 +1,31 @@
+ ATxmega EBI SDRAM example for the Atmel XPLAIN and XMEGA-A1 Xplained 
+ boards and the CodeVisionAVR V3.04 or later compilers
+ (C) Copyright 2010-2013 Pavel Haiduc, HP InfoTech s.r.l.  
+ 
+ Chip Type: ATxmega128A1 running from the 32MHz internal oscillator
+ The EBI configuration is specified in the
+ Project|Configure|C Compiler|EBI Settings menu
+ 
+ The SDRAM settings are:
+ 
+ CAS Latency: 3 x2 ClkPer cycles 
+ Row bits: 12 
+ Column bits: 10 
+ Mode Register Delay: 2 x2 ClkPer cycles  
+ Row Cycle Delay: 7 x2 ClkPer cycles  
+ Row to Pre-charge Delay: 7 x2 ClkPer cycles  
+ Write Recovery Delay: 1 x2 ClkPer cycles  
+ Exit Self Refresh to Active Delay: 7 x2 ClkPer cycles  
+ Row to Column Delay: 7 x2 ClkPer cycles  
+ Refresh Period: 1023 x2 ClkPer cycles (64 us @ 32MHz). 
+ Initialization Delay: 4096 x2 ClkPer cycles (256 us @ 32MHz). 
+ 
+ All EBI initialization is performed automatically by
+ CodeVisionAVR in the startup code
+ 
+ The SDRAM connections are:
+ 
+ PORTK[7:0] - A[7:0]
+ PORTJ[7:0] - {A[11:8],D[3:0]}
+ PORTH[7:0] - {WE,CAS,RAS,DQM,BA0,BA1,CKE,CLK}   
+ Note: The SDRAM /CS signal is permanently connected to GND 

@@ -1,0 +1,2 @@
+Port of Atmel Application Note AVR1600 for the CodeVisionAVR C Compiler
+Copyright (C) 2009-2012 HP InfoTech s.r.l., Pavel Haiduc

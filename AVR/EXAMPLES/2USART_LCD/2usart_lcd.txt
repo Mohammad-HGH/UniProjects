@@ -1,0 +1,18 @@
+CodeVisionAVR C Compiler
+© Copyright 2000-2010 HP InfoTech S.R.L.
+www.hpinfotech.com
+
+Example program for redirecting the output of the
+standard C I/O functions to the following
+peripherals:
+    - USART 0
+    - USART 1
+    - LCD
+
+Chip type           : ATmega128
+AVR Clock frequency : 3.686400 MHz (STK500)
+Baud rate:          : 9600
+Comm. parameters    : 8N1
+
+The AVR chip is placed on a STK501 adapter
+connected to an Atmel STK500 development board.

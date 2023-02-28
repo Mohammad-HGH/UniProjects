@@ -1,0 +1,24 @@
+ Adam Dunkels uIP Webserver example
+ http://www.sics.se/~adam/uip/index.php/Main_Page
+  
+ Adapted for the Crumb644-NET AVR ATmega644P Ethernet
+ module from http://www.chip45.com
+ by S.Perzborn http://www.perzborn.net
+        
+ Adapted/optimized for the CodeVisionAVR V2.05.0+
+ compiler by HP InfoTech s.r.l. http://www.hpinfotech.com
+        
+ * ----------------------------------------------------------------------------
+  Programm Fuse Bits (20MHz crystal, no Prescaler, no JTAG) : 
+  CKSEL 0=0 not checked
+  CKSEL 1=0 not checked
+  CKSEL 2=0 not checked
+  CKSEL 3=0 checked
+  
+ * ----------------------------------------------------------------------------
+ IP-address (192.168.178.14), netmask (255.255.255.0) and gateway (192,168,178,1) 
+ are predefined in module CP2200.c function network_device_init()
+ 
+ Type HELP at serial (RS232) interface for information about how to display and 
+ change IP address and netmask during runtime
+ (Serial interface parameters: 19200 baud, 8 data bits, no parity, 1 stop bit)

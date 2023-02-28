@@ -1,0 +1,12 @@
+Port of Atmel Application Note AVR1316 for the CodeVisionAVR C Compiler
+Copyright (C) 2009-2010 HP InfoTech s.r.l., Pavel Haiduc
+
+Before using, please read the AVR1316 Application Note from:
+www.atmel.com/dyn/resources/prod_documents/doc8070.pdf
+
+Use an Xmega XPLAINED board for testing.
+Connect a programmer (JTAGICE or AVR DRAGON) to the JTAG/PDI header.
+Select the programmer type in Settings|Programmer.
+Perform Project|Build All.
+If LED 0 and LED 1 lights, then the program was executed correctly.
+If LED 2 flashes then there was an error executing the program.

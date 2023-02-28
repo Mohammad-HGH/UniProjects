@@ -1,0 +1,67 @@
+Samsung S6D1121 Color TFT LCD controller demo
+(C) Copyright 2011-2013 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+This example can't be compiled with the Evaluation version
+of CodeVisionAVR because of the program size.
+In this case you can program the ATxmega128A1 FLASH with
+the contents of the
+\EXAMPLES\Graphic LCD\S6D1121\256 Colors\Release\Exe\demo_fft24.hex
+file.
+
+The demo is designed to run on the Atmel XMEGA-A1 Xplained
+development board with an ATxmega128A1 chip using the internal 32 MHz
+oscillator as clock source.
+
+A 240x320 2.4" TFT LCD module is used for the purpose of this demo.
+It can be replaced with other similar modules with
+the S6D1121 controller.
+
+In this demo the controller is operated in 256 color mode
+using an 8-bit bus connection.
+
+The TFT LCD module connections are:
+DB0  - GND
+DB1  - GND
+DB2  - GND
+DB3  - GND
+DB4  - GND
+DB5  - GND
+DB6  - GND
+DB7  - GND
+
+DB8  - PORTA bit 0
+DB9  - PORTA bit 1
+DB10 - PORTA bit 2
+DB11 - PORTA bit 3
+DB12 - PORTA bit 4
+DB13 - PORTA bit 5
+DB14 - PORTA bit 6
+DB15 - PORTA bit 7
+
+/WR  - PORTD bit 3
+/RD  - PORTD bit 2
+RS   - PORTD bit 1
+/RST - PORTD bit 4
+/CS  - PORTD bit 0
+
+Backlight connections:
+GND   - GND
+LED-A - 100 ohm resistor to +3.3V
+
+Power supply connections:
+GND - GND
+VCC - +3.3V
+
+The J1 jumper on the PCB must be set in order
+to bypass the on-board voltage regulator
+and use the external 3.3V power supply.
+The J3 jumper on the PCB must be left opened
+in order to use the 8-bit interface.
+Details are in the included schematic.
+
+If you are using a different LCD module,
+please use the connections from the module datasheet.
+
+The connections can be modified by accessing the
+Project|Configure|C Compiler|Libraries|Graphic LCD menu.

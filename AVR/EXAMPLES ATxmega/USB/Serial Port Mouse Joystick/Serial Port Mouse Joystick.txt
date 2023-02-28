@@ -1,0 +1,174 @@
+Example of an USB Composite Device containing a
+CDC Virtual Serial Port, a HID Mouse and Joystick
+© Copyright 2014 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+CodeVisionAVR Compiler version 3.13 or later
+is required.
+
+The program is designed to be executed on the
+Atmel STK600 development board, using
+an ATxmega128A4U chip.
+
+This program exceeds the allowed code size
+of the Evaluation version.
+In this case you can program the ATxmega128A4U FLASH memory with
+the contents of the \Exe\Serial Port Mouse Joystick.hex file.
+
+The chip uses the internal 32 MHz RC oscillator,
+adjusted and calibrated to 48 MHz using the
+DFLL and USB Start Of Frame.
+The CPU and Peripheral Clock frequency are set to 12 MHz.
+
+The STK600-TQFP44 socket and STK600-RC044X-55 routing
+cards are used for interfacing the chip with
+the STK600.
+
+The LEDs are connected to PORTA pin 0..7 outputs.
+For this purpose use a 10 pin ribbon cable to connect
+the PORTA and LED headers.
+
+The STK600 switches are connected to PORTC pin 0..7 inputs.
+For this purpose use a 10 pin ribbon cable to connect
+the PORTC and SWITCHES headers.
+
+Interfaces 0 and 1 are used by the CDC Virtual Serial Port.
+Interface 2 is used by the HID Mouse.
+Interface 3 is used by the HID Joystick.
+
+In order to use this example, the
+'Joystick Test.exe' program must be
+launched on the PC.
+
+The 'Joystick Test' program will display the joystick
+movements and button states, simulated by pressing the
+switches SW0..SW7 on the STK600 board:
+
+SW0 - Move joystick right
+SW1 - Move joystick left
+SW2 - Move joystick up
+SW3 - Move joystick down
+SW4 - Move joystick Z axis up
+SW5 - Move joystick Z axis down
+SW6 - Press joystick button 1
+SW7 - Press joystick button 2
+
+The mouse cursor will be moved every 5 seconds on a triangle shape,
+using the TCC0 Timer/Counter overflow interrupt.
+
+Status messages will be sent to the CDC Virtual Serial Port 0.
+
+The CDC Virtual Serial Port uses the Windows serial driver.
+Please follow the installation procedures below:
+
+***** Windows 8 and 8.1 *****
+- Invoke the Charms bar and click on "Settings"
+- Click on "Change PC Settings" (bottom right of the screen)
+- In "PC Settings" click on "Update & recovery" (last option
+  in the left column)
+- In "Update & recovery" select "Recovery"
+- Select in "Advanced startup" the "Restart Now" option
+- In the displayed list of options select "Troubleshoot"
+- In "Troubleshoot" select "Advanced Options"
+- In "Advanced Options" select "Startup Settings"
+- In "Startup Settings" click on the "Restart" button
+- The system will restart
+- When prompted, press the F7 key, which will disable the driver
+  signature enforcement
+- Wait for the system to boot completely
+- Connect the STK600 development board to the computer's
+  USB port, wait a little
+- Windows tries to install the driver, but doesn't succeed
+- Invoke again the Charms bar and click on "Settings"
+- Click on "Change PC Settings" (bottom right of the screen)
+- Click on "Control Panel" (bottom left of the screen)
+- Click on "Hardware and Sound"
+- Under "Device and Printers", click on "Device Manager"
+- In the Device Manager window expand the "Other Devices" node
+- Right click on the "CodeVisionAVR CDC Virtual Serial Port"
+  node of "Other Devices"
+- Select "Update Driver Software..."
+- Select "Browse my computer for driver software"
+- Browse to the directory where the file
+  "CVAVR Composite Device.inf" is located:
+  "\cvavr\Examples ATxmega\USB\Serial Port Mouse Keyboard"
+- Click on the "Next" button
+- Windows starts the driver installation, but displays
+  a warning window "Windows can't verify the publisher of
+  this driver software"
+- Select "Install this driver software anyway"
+- Windows finally installs the driver
+- The new CDC Virtual Serial Port will be now listed in the
+  Device Manager window under "Ports (COM & LPT)" as
+  "CodeVisionAVR CDC Virtual Serial Port (COMn)"
+- Retain the COMn number of the serial port and go to
+  the CodeVisionAVR IDE "Settings|Terminal menu" and set
+  the Terminal to use this COM port
+- In the Terminal settings enable the "Echo Transmitted Characters"
+  and disable the "Append On Reception" options
+- Start the CodeVisionAVR Terminal using the "Tools|Terminal"
+  menu and click on the "Connect" button.
+
+***** Windows Vista, Seven *****
+- After connecting the STK600 development board
+  to the computer's USB port, Windows tries to install
+  the driver, but finally displays:
+  "Device driver software was not succesfully installed"
+  and "No driver found".
+- Click on the Windows "Start" button
+- Click on "Control Panel"
+- Click on "Hardware and Sound"
+- Under "Device and Printers", click on "Device Manager"
+- In the "Device Manager" window expand the "Other Devices" node
+- Right click on the "CodeVisionAVR CDC Virtual Serial Port"
+  node of "Other Devices"
+- Select "Update Driver Software..."
+- Select "Browse my computer for driver software"
+- Browse to the directory where the file
+  "CVAVR Composite Device.inf" is located:
+  "\cvavr\Examples ATxmega\USB\Serial Port Mouse Keyboard"
+- Click on the "Next" button
+- Windows starts the driver installation, but displays
+  a warning window "Windows can't verify the publisher of
+  this driver software"
+- Select "Install this driver software anyway"
+- Windows finally installs the driver
+- The new CDC Virtual Serial Port will be now listed in the
+  Device Manager window under Ports (COM & LPT) as
+  "CodeVisionAVR CDC Virtual Serial Port (COMn)"
+- Retain the COMn number of the serial port and go to
+  the CodeVisionAVR IDE "Settings|Terminal" menu and set
+  the Terminal to use this COM port
+- In the Terminal settings enable the "Echo Transmitted Characters"
+  and disable the "Append On Reception" options
+- Start the CodeVisionAVR Terminal using the "Tools|Terminal"
+  menu and click on the "Connect" button.
+
+***** Windows XP *****
+- After connecting the STK600 development board
+  to the computer's USB port, the "Found New Hardware Wizard"
+  window will open
+- Select "Install from a List or Specific Location (Advanced)"
+- Click on the "Next" button
+- Select the "Search for the best driver in these locations"
+  and "Include this location in search" options
+- Browse to the directory where the file
+  "CVAVR Composite Device.inf" is located:
+  "\cvavr\Examples ATxmega\USB\Serial Port Mouse Keyboard"
+- Click on the "Next" button
+- Windows starts the driver installation, but displays
+  a warning window with the message:
+  "CodeVisionAVR CDC Virtual Serial Port has not passed Windows
+  Logo testing to verify its compatibility with Windows XP"
+- Click on the "Continue Anyway" button
+- Windows finally installs the driver
+- The new CDC Virtual Serial Port will be now listed in the
+  Device Manager window under Ports (COM & LPT) as
+  "CodeVisionAVR CDC Virtual Serial Port (COMn)"
+- Retain the COMn number of the serial port and go to
+  the CodeVisionAVR IDE "Settings|Terminal" menu and set
+  the Terminal to use this COM port
+- In the Terminal settings enable the "Echo Transmitted Characters"
+  and disable the "Append On Reception" options
+- Start the CodeVisionAVR Terminal using the "Tools|Terminal"
+  menu and click on the Connect button.

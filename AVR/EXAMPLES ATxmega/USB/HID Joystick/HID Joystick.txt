@@ -1,0 +1,54 @@
+USB HID Joystick Example
+© Copyright 2014 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+CodeVisionAVR Compiler version 3.13 or later
+is required.
+
+The program is designed to be executed on the
+Atmel STK600 development board, using
+an ATxmega128A4U chip.
+
+This program exceeds the allowed code size
+of the Evaluation version.
+In this case you can program the ATxmega128A4U FLASH memory with
+the contents of the \Exe\HID Joystick.hex file.
+
+The chip uses the internal 32 MHz RC oscillator,
+adjusted and calibrated to 48 MHz using the
+DFLL and USB Start Of Frame.
+The CPU and Peripheral Clock frequency are set to 12 MHz.
+
+The STK600-TQFP44 socket and STK600-RC044X-55 routing
+cards are used for interfacing the chip with
+the STK600.
+
+The LEDs are connected to PORTA pin 0..7 outputs.
+For this purpose use a 10 pin ribbon cable to connect
+the PORTA and LED headers.
+
+The STK600 switches are connected to PORTC pin 0..7 inputs.
+For this purpose use a 10 pin ribbon cable to connect
+the PORTC and SWITCHES headers.
+
+The STK600 with the ATxmega128A4U chip, programmed with this
+example's code, must be connected to an USB port of the PC.
+The STK600's mini USB connector and an appropriate cable
+must be used for this purpose.
+
+In order to use this example, the
+'Joystick Test.exe' program must be
+launched on the PC.
+
+The 'Joystick Test' program will display the joystick
+movements and button states, simulated by pressing the
+switches SW0..SW7 on the STK600 board:
+
+SW0 - Move joystick right
+SW1 - Move joystick left
+SW2 - Move joystick up
+SW3 - Move joystick down
+SW4 - Move joystick Z axis up
+SW5 - Move joystick Z axis down
+SW6 - Press joystick button 1
+SW7 - Press joystick button 2

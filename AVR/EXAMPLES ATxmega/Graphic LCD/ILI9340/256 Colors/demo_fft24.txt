@@ -1,0 +1,71 @@
+Ilitek ILI9340 Color TFT LCD controller demo
+(C) Copyright 2011-2013 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+This program can't be compiled with the Evaluation or
+Standard versions of CodeVisionAVR, because the
+glcd_ili9340.lib file is supplied only with the
+Advanced license.
+In this case you can program the ATxmega128A1 FLASH with
+the contents of the
+\EXAMPLES\Graphic LCD\ILI9340\256 Colors\Exe\demo_fft24.hex
+file.
+
+The demo is designed to run on the Atmel XMEGA-A1 Xplained
+development board with an ATxmega128A1
+chip using the internal 32 MHz oscillator
+as clock source.
+
+A type NHD-2.4-240320SF-CTXI-F1 (older variant with ILI9340)
+240x320 2.4" TFT LCD module from www.newhavendisplay.com
+is used for the purpose of this demo.
+It can be replaced with other similar modules with
+the ILI9340 controller.
+
+In this demo the controller is operated in 256 color mode
+using a 8 bit interface .
+
+The TFT LCD module connections are:
+DB0  - GND
+DB1  - GND
+DB2  - GND
+DB3  - GND
+DB4  - GND
+DB5  - GND
+DB6  - GND
+DB7  - GND
+
+DB8  - PORTA bit 0
+DB9  - PORTA bit 1
+DB10 - PORTA bit 2
+DB11 - PORTA bit 3
+DB12 - PORTA bit 4
+DB13 - PORTA bit 5
+DB14 - PORTA bit 6
+DB15 - PORTA bit 7
+
+/CS  - PORTD bit 0
+RS (D/C) - PORTD bit 1
+/RD  - PORTD bit 2
+/WR  - PORTD bit 3
+/RST - PORTD bit 4
+
+IM0  - +3.3V Use 8 bit interface mode
+
+Backlight connections:
+LED-A  - +3.3V
+LED-K1 - connected to GND using a 470 ohm resistor
+LED-K2 - connected to GND using a 470 ohm resistor
+LED-K3 - connected to GND using a 470 ohm resistor
+LED-K4 - connected to GND using a 470 ohm resistor
+
+Power supply connections:
+GND   - GND
+VDD   - +3.3V
+IOVDD - +3.3V
+
+If you are using a different LCD module,
+please use the connections from the module datasheet.
+
+The connections can be modified by accessing the
+Project|Configure|C Compiler|Libraries|Graphic LCD menu.

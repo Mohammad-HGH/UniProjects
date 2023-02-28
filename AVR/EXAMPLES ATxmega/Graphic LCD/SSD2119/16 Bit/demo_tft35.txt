@@ -1,0 +1,71 @@
+Solomon Systech SSD2119 Color TFT LCD controller demo
+(C) Copyright 2011-2012 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+This program can't be compiled with the Evaluation
+version of CodeVisionAVR, because the glcd_ssd2119.lib
+file is supplied only with the Advanced license.
+In this case you can program the ATxmega128A1 FLASH with
+the contents of the
+\EXAMPLES\Graphic LCD\SSD2119\16 Bit\Exe\demo_tft35.hex
+file.
+
+A large portion of the program (51712 bytes)
+consists of the uncompressed 186x139 64k color
+image from the file image.c
+The image was left uncompressed in order to
+allow fast loading.
+
+In this demo the SSD2119 controller operates in 
+16 bit interface mode.
+
+The demo is designed to run on the STK600
+development board with an ATxmega128A1
+chip using the internal 32 MHz oscillator
+as clock source.
+
+A generic 320x240 3.5" TFT LCD module is used for
+the purpose of this demo.
+It can be replaced with other similar modules with
+the SSD2119 controller. 
+
+The TFT LCD module connections are:
+DB0  - PORTD bit 0
+DB1  - PORTD bit 1
+DB2  - PORTD bit 2
+DB3  - PORTD bit 3
+DB4  - PORTD bit 4
+DB5  - PORTD bit 5
+DB6  - PORTD bit 6
+DB7  - PORTD bit 7
+
+DB8  - PORTE bit 0
+DB9  - PORTE bit 1
+DB10 - PORTE bit 2
+DB11 - PORTE bit 3
+DB12 - PORTE bit 4
+DB13 - PORTE bit 5
+DB14 - PORTE bit 6
+DB15 - PORTE bit 7
+
+/CS           - PORTC bit 0
+RS (D/C)      - PORTC bit 1
+/WR           - PORTC bit 2
+/RD           - PORTC bit 3
+/RESET (/RST) - PORTC bit 4
+
+16 bit interface selection inputs:
+PS0  - GND
+PS1  - +3.3V
+PS2  - GND
+PS3  - GND
+
+Power supply connections:
+GND  - GND
+3V3  - +3.3V
+
+If you are using a different LCD module,
+please use the connections from the module datasheet.
+
+The connections can be modified by accessing the
+Project|Configure|C Compiler|Libraries|Graphic LCD menu.

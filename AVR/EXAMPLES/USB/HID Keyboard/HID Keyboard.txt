@@ -1,0 +1,29 @@
+CodeVisionAVR USB HID Keyboard Example
+© Copyright 2014 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+CodeVisionAVR Compiler version 3.11 or later
+is required.
+
+The program is designed to be executed on the
+Atmel AT90USBKEY development board, using
+an AT90USB1287 chip running at 8.000000 MHz.
+
+The AT90USBKEY, programmed with this example's
+code, must be connected to an USB port of the PC.
+
+Open a new file in the CodeVisionAVR editor
+and click with the mouse in the editor window,
+so that the caret will displayed.
+
+After the HID keyboard is detected by the PC,
+joystick movements on the AT90USBKEY board will be
+translated to key inputs in the editor window:
+
+left   -> 'l' or 'L' key
+right  -> 'r' or 'R' key
+up     -> 'u' or 'U' key
+down   -> 'd' or 'D' key
+select -> toggle Caps Lock on/off.
+
+Board's LEDs will display keyboard status.

@@ -1,0 +1,31 @@
+Example program for I2C bus communication
+as a master using TWI
+
+CodeVisionAVR V2.05.1+ C Compiler
+(C) 2000-2011 HP InfoTech S.R.L.
+www.hpinfotech.ro
+
+Chip: ATmega328P
+Memory Model: SMALL
+Data Stack Size: 512 bytes
+Clock frequency: 16.0 MHz
+   
+The master will transmit packets of
+data to the slave using the I2C bus.
+The slave will respond back through the I2C bus
+with a confirmation message, which will be
+then transmitted by the master development
+board by RS232 to a COM port of the PC. 
+      
+The CodeVisionAVR Terminal can be used to
+display this message.
+
+Serial communication parameters: 9600 8N1
+
+I2C bus port bits allocations for TWI on PORTC:
+SDA=bit 4, SCL=bit 5
+These signals must be connected to the corresponding
+SDA and SCL signals of the I2C slave board.  
+   
+NOTE: 3.3k..4.7k PULL-UP RESITORS TO +5V MUST
+BE USED FOR THE SDA & SCL I2C BUS SIGNALS

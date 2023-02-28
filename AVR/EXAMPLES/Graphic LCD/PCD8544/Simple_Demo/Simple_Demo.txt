@@ -1,0 +1,22 @@
+Philips PCD8544 Graphic LCD controller demo
+(C) Copyright 2011 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+The program is designed to be compiled with the Evaluation
+version, so it's capabilities are limited.
+
+The demo is designed to run on Atmel's Xplain ATxmega128A1
+development board.
+The ATxmega128A1 chip runs from the internal RC oscillator
+at 2 MHz.
+
+The 84x48 graphic LCD module (Nokia 3310, 5110 compatible)
+is connected to PORTD:
+/SCE - PORTD bit 0
+/RES - PORTD bit 1
+D/C  - PORTD bit 2
+SDIN - PORTD bit 3
+SCLK - PORTD bit 4
+
+The connections can be modified by accessing the
+Project|Configure|C Compiler|Libraries|Graphic LCD menu.

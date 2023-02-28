@@ -1,0 +1,83 @@
+Solomon Systech SSD1963 Color TFT LCD controller demo.
+Display an image stored in a binary file on a SD card.
+
+(C) Copyright 2011-2013 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+The image was imported from a JPG PC file and
+converted to a binary format, compatible with the
+CodeVisionAVR graphic library, using the LCD Vision software.
+
+The converted "image.bin" file from the project directory
+must be copied to the SD card, so that it can be read
+by this example program. 
+
+This program can't be compiled with the Evaluation or
+Standard versions of CodeVisionAVR, because the glcd_ssd1963.lib
+file is supplied only with the Advanced license.
+In this case you can program the ATxmega128A1 FLASH with
+the contents of the
+\EXAMPLES ATXmega\Graphic LCD\Display Image from SD Card\SSD1963\Exe\Display image from SD card.hex
+file.
+
+The demo is designed to run on the STK600
+development board with an ATxmega128A1
+chip using the internal 32 MHz oscillator
+as clock source.
+
+A Micro SD card socket is connected to the development board
+as outlined below:
+
+Card Socket
+/CS ------------ PORTF bit 4
+SI  ------------ PORTF bit 5 MOSI
+SO  ------------ PORTF bit 6 MISO
+SCK ------------ PORTF bit 7 SCK
+GND ------------ GND
++3.3V ---------- +3.3V
+
+The /CD and WP signals are disabled in the project configuration,
+because a Micro SD card socket without these signals was used.
+
+For other I/O port connections, you need to make the appropriate changes in the
+"Project|Configure|C Compiler|Libraries|MMC/SD/SD HC Card and FAT Support"
+menu.
+
+A 480x272 4.3" TFT LCD module is used for
+the purpose of this demo.
+It can be replaced with other similar modules with
+the SSD1963 controller. 
+
+The TFT LCD module connections are:
+DB0  - PORTA bit 0
+DB1  - PORTA bit 1
+DB2  - PORTA bit 2
+DB3  - PORTA bit 3
+DB4  - PORTA bit 4
+DB5  - PORTA bit 5
+DB6  - PORTA bit 6
+DB7  - PORTA bit 7
+
+DB8  - not connected
+DB9  - not connected
+DB10 - not connected
+DB11 - not connected
+DB12 - not connected
+DB13 - not connected
+DB14 - not connected
+DB15 - not connected
+
+/CS  - PORTD bit 0
+D/C  - PORTD bit 1
+/RD  - PORTD bit 2
+/WR  - PORTD bit 3
+/RST - PORTD bit 4
+
+Backlight PWM - PORTD bit 5
+
+GND   - GND
++3.3V - +3.3V
++5V   - +5V
+
+The connections can be modified by accessing the
+Project|Configure|C Compiler|Libraries|Graphic LCD menu.

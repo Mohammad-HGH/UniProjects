@@ -1,0 +1,3 @@
+Port to CodeVisionAVR of the Atmel application note AVR1300: Using the XMEGA ADC
+Interrupt driven example.
+More details are available at: http://www.atmel.com/dyn/resources/prod_documents/doc8032.pdf

@@ -1,0 +1,20 @@
+USB Mouse HID Example
+© Copyright 2014 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+CodeVisionAVR Compiler version 3.11 or later
+is required.
+
+The program is designed to be executed on the
+Atmel AT90USBKEY development board, using
+an AT90USB1287 chip running at 8.000000 MHz.
+
+The AT90USBKEY, programmed with this example's
+code, must be connected to an USB port of the PC.
+
+After the HID mouse device is detected,
+the mouse cursor will be moved in a triangular
+shape on the screen.
+
+The LED5.2, connected to PORTD bit 7 output,
+will be lighted during mouse cursor movement.

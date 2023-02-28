@@ -1,0 +1,49 @@
+USB Generic HID Example
+© Copyright 2014 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+CodeVisionAVR Compiler version 3.13 or later
+is required.
+
+The program is designed to be executed on the
+Atmel STK600 development board, using
+an ATxmega128A4U chip.
+
+This program exceeds the allowed code size
+of the Evaluation version.
+In this case you can program the ATxmega128A4U FLASH memory with
+the contents of the \Exe\HID Generic.hex file.
+
+The chip uses the internal 32 MHz RC oscillator,
+adjusted and calibrated to 48 MHz using the
+DFLL and USB Start Of Frame.
+The CPU and Peripheral Clock frequency are set to 12 MHz.
+
+The STK600-TQFP44 socket and STK600-RC044X-55 routing
+cards are used for interfacing the chip with
+the STK600.
+
+In order to use this example, the 'Generic Hid Test.exe'
+program must be launched on the PC.
+This program requires the .NET framework 4.0 to be installed
+on the computer.
+It can be downloaded from:
+http://www.microsoft.com/en-us/download/details.aspx?id=17718
+
+Note: The source code for the 'Generic Hid Test.exe' program
+is supplied only with the commercial versions of CodeVisionAVR.
+
+The STK600 with the ATxmega128A4U chip, programmed with this
+example's code, must be connected to an USB port of the PC.
+The STK600's mini USB connector and an appropriate cable
+must be used for this purpose.
+
+The 'Generic Hid Test' program will display the report data
+sent by the STK600 to the PC host.
+
+Checking the LED boxes in the 'Generic Hid Test' program,
+will send report data to the USB device and will light
+the appropriate LEDs on the STK600 board.
+The LEDs are connected to PORTA pin 0..7 outputs.
+For this purpose use a 10 pin ribbon cable to connect
+the PORTA and LED headers.

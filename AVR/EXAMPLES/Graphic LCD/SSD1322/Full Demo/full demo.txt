@@ -1,0 +1,39 @@
+Solomon Systech SSD1322 Graphic controller demo
+(C) Copyright 2011-2013 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+The demo is designed to run on an ATxmega128A1
+XPlained development board with chip clock of 32 MHz.
+
+A Densitron DD-12864YW-13A 128x64 OLED display module was
+used for the purpose of this demo.
+
+The display module connections using the 8080 parallel interface are:
+DB0    - PORTA bit 0
+DB1    - PORTA bit 1
+DB2    - PORTA bit 2
+DB3    - PORTA bit 3
+DB4    - PORTA bit 4
+DB5    - PORTA bit 5
+DB6    - PORTA bit 6
+DB7    - PORTA bit 7
+
+/RD    - PORTD bit 0
+/WR    - PORTD bit 1
+D/C    - PORTD bit 2
+/CS    - PORTD bit 3
+/RES   - PORTD bit 4
+Vcc ON - PORTD bit 5 enables the 15V Vcc DC/DC converter
+
+BS0    - GND
+BS1    - +3.3V
+
+Make sure to specify the correct connections in the
+Project|Configure|C Compiler|Libraries|Graphic LCD menu.
+
+This program exceeds the code size limit of the Evaluation
+version of CodeVisionAVR.
+In this case you can program the ATxmega128A1 FLASH with
+the contents of the
+\EXAMPLES\Graphic LCD\SSD1322\Full Demo\Release\Exe\Full Demo.hex
+file.

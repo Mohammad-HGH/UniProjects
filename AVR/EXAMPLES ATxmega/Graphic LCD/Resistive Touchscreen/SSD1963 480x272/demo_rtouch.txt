@@ -1,0 +1,76 @@
+Solomon Systech SSD1963 Color TFT LCD and
+ADS7846 Resistive Touchscreen controller demo
+(C) Copyright 2011-2013 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+This program can't be compiled with the Evaluation or
+Standard versions of CodeVisionAVR, because the glcd_ssd1963.lib
+file is supplied only with the Advanced license.
+In this case you can program the ATxmega128A1 FLASH with
+the contents of the
+\EXAMPLES\Graphic LCD\Resistive Touchscreen\SSD1963 480x272\Release\Exe\demo_rtouch.hex
+file.
+
+The demo is designed to run on the STK600
+development board with an ATxmega128A1
+chip using the internal 32 MHz oscillator
+as clock source.
+
+In this demo the SSD1963 controller operates in 
+8 bit interface mode.
+For better performance the 16 bit operating mode can
+be selected by accessing the
+Project|Configure|C Compiler|Libraries|Graphic LCD menu.
+In this situation the DB8-DB15 signals must be also
+connected to one of the ATxmega128A1 ports.   
+
+A 480x272 4.3" TFT LCD module is used for
+the purpose of this demo.
+It can be replaced with other similar modules with
+the SSD1963 controller. 
+
+The TFT LCD module connections are:
+DB0  - PORTC bit 0
+DB1  - PORTC bit 1
+DB2  - PORTC bit 2
+DB3  - PORTC bit 3
+DB4  - PORTC bit 4
+DB5  - PORTC bit 5
+DB6  - PORTC bit 6
+DB7  - PORTC bit 7
+
+DB8  - not connected
+DB9  - not connected
+DB10 - not connected
+DB11 - not connected
+DB12 - not connected
+DB13 - not connected
+DB14 - not connected
+DB15 - not connected
+
+/CS  - PORTE bit 0
+D/C  - PORTE bit 1
+/RD  - PORTE bit 2
+/WR  - PORTE bit 3
+/RST - PORTE bit 4
+
+Backlight PWM - PORTE bit 5
+
+GND   - GND
++3.3V - +3.3V
++5V   - +5V
+
+ADS7846 touch screen controller connections:
+/CS     - PORTF bit 0
+DCLK    - PORTF bit 1
+DIN     - PORTF bit 2
+DOUT    - PORTF bit 3
+/PENIRQ - PORTF bit 4
+
+If you are using a different LCD module,
+please use the connections from the module datasheet.
+
+The connections can be modified by accessing the
+Project|Configure|C Compiler|Libraries|Graphic Display and
+Project|Configure|C Compiler|Libraries|Resistive Touchscreen
+menus.

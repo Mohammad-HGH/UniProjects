@@ -1,0 +1,51 @@
+Creation, writing, appending, reading, attribute and time stamp changing
+of a file on a MMC/SD/SD HC card example for the CodeVisionAVR V3.08+
+compiler.
+(C) 2009-2013 HP InfoTech s.r.l., Pavel Haiduc
+
+The example is intended to be run on the Atmel STK600
+development board that use an ATxmega256C3 chip.
+A STK600-RC064X-14 addapter board is used.
+The chip is clocked from the internal 32MHz oscillator.
+
+A Micro SD card socket is connected to the development board
+as outlined below:
+
+Card Socket      ATxmega256C3
+/CS ------------ PORTC bit4
+SI  ------------ PORTC bit5 MOSI
+SO  ------------ PORTC bit6 MISO
+SCK ------------ PORTC bit7 SCK
+GND ------------ GND
++3.3V ---------- +3.3V
+
+The /CD and WP signals are disabled in the project configuration,
+because a Micro SD card socket without these signals was used.
+
+For other I/O port connections, you need to make the appropriate changes in the
+"Project|Configure|C Compiler|Libraries|MMC/SD/SD HC Card and FAT Support"
+menu.
+
+The ATxmega256C3 USARTD0 is used for communication.
+Connect
+PORTD bit 2 - RS232 Spare RXD
+PORTD bit 3 - RS232 Spare TXD
+
+
+The CodeVisionAVR Terminal is used for displaying data received from the
+development board.
+The Terminal must be configured for:
+
+Baud Rate: 9600
+Data Bits: 8
+Parity: None
+Stop Bits: 1
+Emulation: TTY
+Handshaking: None
+Append LF on Reception: OFF
+Appearance|Rows: 40
+Appearance|Columns: 80
+
+If you are using the CodeVisionAVR Evaluation version, you may program into
+the FLASH the precompiled SDCARD_XM.HEX file found in the
+\Examples ATxmega\SDCARD\C3\EXE directory

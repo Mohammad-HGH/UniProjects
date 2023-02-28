@@ -1,0 +1,36 @@
+Solomon Systech SSD1303/Sino Wealth SH1101A Graphic controller demo
+(C) Copyright 2011-2012 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+The program is designed to be compiled with the Evaluation
+version, so it's capabilities are limited.
+
+The demo is designed to run on an ATxmega128A1
+XPlain development board with chip clock of 2 MHz.
+
+A Bolymin BL12864G 128x64 OLED display module was
+used for the purpose of this demo.
+
+The display module connections are:
+4  DB0    - PORTA bit 0
+5  DB1    - PORTA bit 1
+6  DB2    - PORTA bit 2
+7  DB3    - PORTA bit 3
+8  DB4    - PORTA bit 4
+9  DB5    - PORTA bit 5
+10 DB6    - PORTA bit 6
+11 DB7    - PORTA bit 7
+
+16 D/C    - PORTD bit 3
+14 /RES   - PORTD bit 4
+12 /CS    - PORTD bit 5
+17 /RD    - PORTD bit 6
+15 /WR    - PORTD bit 7
+
+1  Vdd    - +3.3V from power supply (140mA)
+2  Vss    - GND
+
+19 DISP   - +3.3V
+
+Make sure to specify the correct connections in the
+Project|Configure|C Compiler|Libraries|Graphic LCD menu.

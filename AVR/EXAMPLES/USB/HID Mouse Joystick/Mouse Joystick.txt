@@ -1,0 +1,31 @@
+Example of an USB Composite Device containing a
+HID Mouse and Joystick
+® Copyright 2014 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+CodeVisionAVR Compiler version 3.12 or later
+is required.
+
+The program is designed to be executed on the
+Atmel AT90USBKEY development board, using
+an AT90USB1287 chip running at 8.000000 MHz.
+
+Interface 0 is used for the Mouse
+and Interface 1 for the Joystick.
+
+In order to use this example, the
+'Joystick Test.exe' program must be
+launched on the PC.
+
+The AT90USBKEY, programmed with this example's
+code, must be connected to an USB port of the PC.
+
+The 'Joystick Test' program will display the
+AT90USBKEY joystick movements.
+
+The mouse cursor will be moved every 5 seconds in
+a triangular shape shape, using the Timer 1
+overflow interrupt.
+
+The LED5.2, connected to PORTD bit 7 output,
+will be lighted during mouse cursor movement.

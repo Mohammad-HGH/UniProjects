@@ -1,0 +1,37 @@
+Sample program to test the ATxmega TWIC master and
+TWID slave operation.
+
+Copyright (C) 2010 Pavel Haiduc and HP InfoTech S.R.L.,
+All rights reserved.
+ 
+If one or several switches SW0..SW7 are pressed
+on the STK600 board, their state is transmitted
+by the TWIC master to the TWID slave, which
+displays the received data on the LED0..LED7.
+The slave sends to the master the contents of the
+test_data array.
+
+NOTE: AS THE TWIX LIBRARY IS NOT SUPPLIED WITH THE
+EVALUATION VERSION OF CODEVISIONAVR, THIS PROJECT
+CAN'T BE SUCCESSFULLY COMPILED WITH THIS VERSION
+
+In order to test the code functionality,
+use the Tools|Programmer to program the ATxmega128A1
+FLASH with the contents of the \Exe\twi_slave.rom file.
+ 
+Use a STK600 development board with STK600-TQFP100 and
+STK600-RC100X-13 addapters
+
+The STK600 programmer must be set in JTAG programming mode
+in the Tools|Programmer menu.
+
+Make sure that the VTARGET and VREF voltages are set to 3.6V
+using AVR Studio.
+The VTARGET LED on the STK600 board must be lighted.
+
+Make the following connections on the STK600:
+
+PC0 - PD0 SDA pin - 4.7K resistor to VTG
+PC1 - PD1 SCL pin - 4.7K resistor to VTG
+SW0..SW7 - PE0..PE7 using a ribbon cable with 10 pin connectors
+LED0..LED7 - PA0..PA7 using a ribbon cable with 10 pin connectors.

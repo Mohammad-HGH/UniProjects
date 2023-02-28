@@ -1,0 +1,42 @@
+Example program for I2C bus communication
+as a slave using TWI
+
+CodeVisionAVR V2.05.1+ C Compiler
+(C) 2000-2011 HP InfoTech S.R.L.
+www.hpinfotech.ro
+
+Chip: ATmega328P
+Memory Model: SMALL
+Data Stack Size: 512 bytes
+Clock frequency: 16.0 MHz
+   
+The master will transmit packets of
+data to the slave using the I2C bus.
+The slave will respond back through the I2C bus
+with a confirmation message.
+The slave will also display the contents
+of the received data packets on a 16x2 LCD
+connected as outlined below:
+   
+[LCD]    [AVR]
+1 GND - GND
+2 +5V - VCC  
+3 VLC - LCD contrast control voltage 0..1V
+4 RS  - PB0
+5 RD  - GND
+6 EN  - PB1
+11 D4  - PD4
+12 D5  - PD5
+13 D6  - PD6
+14 D7  - PD7
+
+The LCD connections are specified in the
+Project|Configure|C Compiler|Libraries|Alphanumeric menu
+
+I2C bus port bits allocations for TWI on PORTC:
+SDA=bit 4, SCL=bit 5
+These signals must be connected to the corresponding
+SDA and SCL signals of the I2C master board.  
+   
+NOTE: 3.3k..4.7k PULL-UP RESITORS TO +5V MUST
+BE USED FOR THE SDA & SCL I2C BUS SIGNALS

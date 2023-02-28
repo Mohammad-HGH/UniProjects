@@ -1,0 +1,28 @@
+Example program for interrupt driven SPI slave reception
+using an ATxmega128A1 chip running at 2MHz from the internal
+2 MHz RC oscillator.
+
+The SPIC peripheral is used as a master to send data to the
+SPID peripheral configured as slave.
+SPIC performs polled transmission.
+SPID performs interrupt driven reception.
+
+Use a STK600 development board with STK600-TQFP100 and
+STK600-RC100X-13 addapters.
+
+The STK600 programmer must be set in JTAG programming
+mode in the Tools|Programmer menu.
+
+Make sure that the VTARGET and VREF voltages are set
+to 3.6V using AVR Studio.
+The VTARGET LED on the STK600 board must be lighted.
+
+Make the following connections on the STK600:
+PORTA header PA0..7 - LED0..7
+PORTC header PC4 (SPIC, /SS)  - PORTD header PD4 (SPID, /SS)
+PORTC header PC5 (SPIC, MOSI) - PORTD header PD5 (SPID, MOSI)
+PORTC header PC6 (SPIC, MISO) - PORTD header PD6 (SPID, MISO)
+PORTC header PC7 (SPIC, SCK)  - PORTD header PD7 (SPID, SCK)
+
+On succesfull reception the LED7 will light.
+In case of failure LED0 will light.

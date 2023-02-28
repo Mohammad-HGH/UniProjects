@@ -1,0 +1,8 @@
+Port to the CodeVisionAVR V2.xx compiler of the Atmel application note AVR109
+
+Modify the definitions for SPM control from defines.h to suit your chip.
+Example, for ATmega2560:
+#define	SPMCR_REG	SPMCSR
+#asm
+     #define WR_SPMCR_REG_R22 out 0x37,r22
+#endasm

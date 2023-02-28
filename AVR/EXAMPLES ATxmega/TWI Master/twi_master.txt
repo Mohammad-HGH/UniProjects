@@ -1,0 +1,42 @@
+Sample program to test the ATxmega128A1 TWID and USARTC0
+
+Copyright (C) 2010 Pavel Haiduc and HP InfoTech S.R.L.,
+All rights reserved.
+ 
+A Maxim/Dallas Semiconductor DS1621 Digital Thermometer
+and Thermostat is connected to the TWID interface.
+The measured temperature is serialy outputed using USARTC0
+and displayed on the CodeVisionAVR Terminal.
+
+NOTE: AS THE TWIX LIBRARY IS NOT SUPPLIED WITH THE
+EVALUATION VERSION OF CODEVISIONAVR, THIS PROJECT
+CAN'T BE SUCCESSFULLY COMPILED WITH THIS VERSION
+
+In order to test the code functionality,
+use the Tools|Programmer to program the ATxmega128A1
+FLASH with the contents of the \Exe\twi_master.rom file.
+ 
+Use a STK600 development board with STK600-TQFP100 and
+STK600-RC100X-13 addapters
+
+The STK600 programmer must be set in JTAG programming mode
+in the Tools|Programmer menu.
+
+Make sure that the VTARGET and VREF voltages are set to 3.6V
+using AVR Studio.
+The VTARGET LED on the STK600 board must be lighted.
+
+Make the following connections on the STK600:
+
+PC3 - RS232 SPARE TXD
+PD0 - DS1621 SDA pin 1 - 4.7K resistor to VTG
+PD1 - DS1621 SCL pin 2 - 4.7K resistor to VTG
+GND - DS1621 GND pin 4
+GND - DS1621 A0 pin 7
+GND - DS1621 A1 pin 6
+GND - DS1621 A2 pin 5
+VTG - DS1621 VDD pin 8.
+
+Connect the STK600 RS232 output to the COM port of the PC.
+Make sure to configure the CodeVisionAVR Terminal
+to 9600bps 8N1, Append LF on reception: disabled.

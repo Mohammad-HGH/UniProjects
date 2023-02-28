@@ -1,0 +1,23 @@
+Sitronix ST7565 Graphic LCD controller with serial connection demo
+(C) Copyright 2011 Pavel Haiduc, HP InfoTech s.r.l.
+http://www.hpinfotech.com
+
+The program is designed to be compiled with the Evaluation
+version, so it's capabilities are limited.
+
+The demo is designed to run on an ATxmega128A1
+XPlain development board with chip clock of 2 MHz.
+
+A Powertip SE12864LRF-042-H-Q display was used for testing.
+
+The 128x64 graphic LCD module connections are:
+SCL    - PORTA bit 6
+SI     - PORTA bit 7
+
+A0     - PORTD bit 3
+/RES   - PORTD bit 4
+/CS    - PORTD bit 5
+
+Make sure to specify the correct connections in the
+Project|Configure|C Compiler|Libraries|Graphic LCD menu.
+
